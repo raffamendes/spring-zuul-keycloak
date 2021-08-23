@@ -1,0 +1,11 @@
+server: 
+  port: 8080
+zuul:
+  sensitiveHeaders: Cookie,Set-Cookie
+  routes:
+    users:
+      path: /**
+      url: ${USERS_URL}
+    tz:
+      path: /tz-path/**
+      url: ${TZ_PATH_URL}
